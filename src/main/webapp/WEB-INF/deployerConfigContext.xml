@@ -40,7 +40,7 @@
                     <property name="passwordEncoder">
                         <bean class="org.eurekaclinical.cas.authentication.handler.MD5PasswordEncoder" />
                     </property>
-                </bean>
+                </bean>                                
             </list>
         </property>
     </bean>
@@ -48,6 +48,7 @@
     <bean id="jndiDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
         <property name="jndiName" value="java:comp/env/jdbc/EurekaService" />
     </bean>   
+
 
     <sec:user-service id="userDetailsService">
         <sec:user name="super.user@emory.edu" password="notused" authorities="ROLE_ADMIN" />
